@@ -1,9 +1,36 @@
+# Dependencies
 node_modules/
+
+# Next.js
 .next/
+out/
+
+# Coverage
 coverage/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
 *.log
-.env*
+
+# Environment & Secrets (NEVER commit these)
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env*.local
 !.env.example
 
+# Sensitive files
+secrets.json
+*.pem
+*.key
+
+# Vercel
 .vercel
+
+# Build
+tsconfig.tsbuildinfo
