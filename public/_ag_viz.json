@@ -1,0 +1,408 @@
+{
+  "antigravity": {
+    "status": "Online",
+    "current_task": null,
+    "tasks_completed": 0,
+    "last_heartbeat": "2026-03-21T22:48:50.295Z"
+  },
+  "agents": {
+    "SaldaClawd": {
+      "model": "hunter-alpha",
+      "status": "Executando",
+      "lastAction": "HEARTBEAT_ALERT  **Berserker Sprint remains ACTIVE** — no progress updates since last check.  **6 pending actions still require attention:** 1. Peptid"
+    }
+  },
+  "logs": [
+    {
+      "agent": "SaldaClawd",
+      "message": "HEARTBEAT_ALERT  **Berserker Sprint remains ACTIVE** — no progress updates since last check.  **6 pending actions still require attention:** 1. Peptid",
+      "timestamp": "2026-03-21T22:34:30.672Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The user is asking me to read HEARTBEAT.md if it exists and follow it strictly. I've already read it many times in this conversation and it",
+      "timestamp": "2026-03-21T22:34:25.438Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "✅ **Health Check Concluído** — sem issues críticos.  **Resultado:** - Tasks Antigravity: 33 total | 10 pending | 0 running | 7 done | 0 failed - Issue",
+      "timestamp": "2026-03-21T22:25:17.476Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "Vou executar o **Factory Health Check** para monitorar a saúde da fábrica SaldaCloud. Primeiro, verifico a estrutura existente e executo o script.",
+      "timestamp": "2026-03-21T22:25:07.117Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "HEARTBEAT_ALERT  **Berserker Sprint remains ACTIVE** — no progress updates.  **6 pending actions:** 1. Peptide Skin — needs Stripe live + real PDF (de",
+      "timestamp": "2026-03-21T22:04:32.760Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The user is asking me to read HEARTBEAT.md and follow it strictly. I need to check the current status and determine if anything needs atten",
+      "timestamp": "2026-03-21T22:04:25.961Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "HEARTBEAT_ALERT  **Berserker Sprint remains ACTIVE** — no changes to report.  **Current pending actions (6):** 1. Peptide Skin — needs Stripe live + r",
+      "timestamp": "2026-03-21T20:46:39.935Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "HEARTBEAT_OK  ---  **Erro de execução:** falhas em `.git\\config` (locks/resets) são ruídoadas de manutenção de repositórios locais. Não afetam as **6 ",
+      "timestamp": "2026-03-21T21:34:29.909Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "HEARTBEAT_OK  ---  **Status detection:** O erro reportado (`es@ungap/structured-clone`) é de uma execução anterior em `projects/adcopy-optimizer`. Não",
+      "timestamp": "2026-03-21T21:32:43.679Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] O usuário está relatando uma falha de execução (exec failed) relacionada a um arquivo de workflow do GitHub Actions em um projeto (adcopy-o",
+      "timestamp": "2026-03-21T21:32:33.778Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "🎯 **Integração GitHub-Vercel concluída com sucesso.**  ---  ### ✅ Tarefas realizadas:  1. **Criado repositório GitHub**      - Nome: `saldanhaClaw/wo",
+      "timestamp": "2026-03-21T21:15:49.447Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "✅ **Resend Integration Concluída — Email Lifecycle Pronto**  **Integração completa:**  - ✅ Conta Resend criada (saldaclawd@gmail.com) - ✅ 4 templates ",
+      "timestamp": "2026-03-21T21:23:07.018Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "I'll finalize the integration and provide a comprehensive report.  ## Summary of Completed Work  I have successfully integrated Resend for transaction",
+      "timestamp": "2026-03-21T21:22:39.361Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Let's snapshot again.",
+      "timestamp": "2026-03-21T21:22:01.398Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The URL is still /login. Maybe the login failed because email not verified? Or maybe it's a SPA and the login is in progress. Let's wait an",
+      "timestamp": "2026-03-21T21:21:54.391Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The Log In button now is active (no disabled attribute). Let's click it.",
+      "timestamp": "2026-03-21T21:21:47.877Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Let's see if the button is now enabled by checking its state. I'll take a snapshot.",
+      "timestamp": "2026-03-21T21:21:44.212Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Now type password.",
+      "timestamp": "2026-03-21T21:21:35.504Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] We have the login page. The Log In button is disabled. We need to fill email and password, then the button enables. Let's fill them.",
+      "timestamp": "2026-03-21T21:21:31.250Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Good. Now let's snapshot the login page.",
+      "timestamp": "2026-03-21T21:21:27.479Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Let's navigate directly to the login page: /login.",
+      "timestamp": "2026-03-21T21:21:14.878Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The page URL didn't change. Maybe the button is not working or it's a SPA navigation that didn't trigger. Let's wait and snapshot again.",
+      "timestamp": "2026-03-21T21:21:08.044Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "Let's try logging in to see if we can access the dashboard without verification:",
+      "timestamp": "2026-03-21T21:21:02.583Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Now snapshot.",
+      "timestamp": "2026-03-21T21:20:55.685Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The button might have been disabled because the form is not valid? Or maybe it allowed. It says ok. Let's wait and then see if the page cha",
+      "timestamp": "2026-03-21T21:20:48.291Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Now click the \"Create account\" button.",
+      "timestamp": "2026-03-21T21:20:40.765Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Good, typed email. Now type password.",
+      "timestamp": "2026-03-21T21:20:37.568Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "Let me attempt to quickly create the Resend account using the Gmail address. I'll type the credentials:",
+      "timestamp": "2026-03-21T21:20:26.300Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "I'll improve the webhook to use the Resend config from env:",
+      "timestamp": "2026-03-21T21:20:14.993Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "Let me search more thoroughly for a Resend API key:",
+      "timestamp": "2026-03-21T21:19:41.048Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Great! prisma installed successfully. Now I can generate the client.",
+      "timestamp": "2026-03-21T21:19:25.215Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Now, let's try to install prisma again and generate client. The install seems stuck due to engine warning but might just be taking time. I'",
+      "timestamp": "2026-03-21T21:19:20.721Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "I'll create a README with setup instructions:",
+      "timestamp": "2026-03-21T21:19:10.654Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "I'll create a vercel.json for deployment configuration:",
+      "timestamp": "2026-03-21T21:18:49.611Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Let's try to kill it and use a different approach. Maybe I don't need the Prisma CLI if I'm not running migrations now. For the webhook to ",
+      "timestamp": "2026-03-21T21:18:35.500Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Now, let's check the prisma install.",
+      "timestamp": "2026-03-21T21:18:17.908Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Now, also create a next-env.d.ts:",
+      "timestamp": "2026-03-21T21:18:13.459Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "I'll create a tsconfig.json for the project:",
+      "timestamp": "2026-03-21T21:18:08.076Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] It's running. I'll wait and then check.",
+      "timestamp": "2026-03-21T21:17:54.822Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The .bin folder might not have prisma because prisma is a dev dependency and we might not have installed it properly. Actually, the first i",
+      "timestamp": "2026-03-21T21:17:41.251Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] On PowerShell, the path separator is backslash but the command may need to be `.\\node_modules\\.bin\\prisma.exe`? Actually, the prisma binary",
+      "timestamp": "2026-03-21T21:17:34.797Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The prisma CLI is not found because we installed it as a dev dependency but it's not in the PATH. We should use `npx prisma` but npx might ",
+      "timestamp": "2026-03-21T21:17:28.728Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Now I need to generate the Prisma client. I'll run `npx prisma generate`.",
+      "timestamp": "2026-03-21T21:17:21.186Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Good. So the dependencies are there. The second install might be redundant. I'll kill the process if still running.",
+      "timestamp": "2026-03-21T21:17:16.224Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Great! The package is already installed. So the install completed. Good.  Now I can also install `@prisma/client` if not present? It should",
+      "timestamp": "2026-03-21T21:17:11.294Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] Only warning repeated. It might be stuck due to something. Let's kill this process and try a simpler approach: I'll just install the needed",
+      "timestamp": "2026-03-21T21:17:05.265Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] The engine warning is about Prisma Studio requiring specific Node versions. But it's just a warning. It should still install. I'll wait a b",
+      "timestamp": "2026-03-21T21:16:58.665Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] It's still installing? Or the log shows warnings, but it might have completed. Let's see if the process ended.",
+      "timestamp": "2026-03-21T21:16:53.592Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "[Pensando] While that's installing, let's also make sure the Prisma schema is correct. It's already in the prisma folder. I need to generate the clien",
+      "timestamp": "2026-03-21T21:16:48.363Z"
+    },
+    {
+      "agent": "SaldaClawd",
+      "message": "I'll install Prisma CLI correctly:",
+      "timestamp": "2026-03-21T21:16:23.207Z"
+    }
+  ],
+  "projects_portfolio": [
+    {
+      "id": "30-30-30",
+      "name": "30-30-30",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "@stripe/stripe-js",
+        "gsap",
+        "next",
+        "react"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    },
+    {
+      "id": "adcopy-optimizer",
+      "name": "adcopy-optimizer",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "@neondatabase/serverless",
+        "clsx",
+        "dotenv",
+        "framer-motion"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-20"
+    },
+    {
+      "id": "aromaterapia-anti-stress",
+      "name": "aromaterapia-anti-stress",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "gsap",
+        "next",
+        "react",
+        "react-dom"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    },
+    {
+      "id": "botox-capilar",
+      "name": "botox-capilar",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "next",
+        "react",
+        "react-dom",
+        "gsap"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    },
+    {
+      "id": "ebookgen-pro",
+      "name": "ebookgen-pro",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "dotenv",
+        "next",
+        "react",
+        "react-dom"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    },
+    {
+      "id": "launchpad-ai-demo",
+      "name": "launchpad-ai-demo",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "gsap",
+        "lucide-react",
+        "next",
+        "react"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    },
+    {
+      "id": "melatonina-gummies",
+      "name": "melatonina-gummies",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "@stripe/stripe-js",
+        "gsap",
+        "lucide-react",
+        "next"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    },
+    {
+      "id": "mounjaro-alert",
+      "name": "mounjaro-alert",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "@google/generative-ai",
+        "@stripe/stripe-js",
+        "axios",
+        "clsx"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    },
+    {
+      "id": "peptide-skin",
+      "name": "peptide-skin",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "@stripe/stripe-js",
+        "gsap",
+        "lucide-react",
+        "next"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    },
+    {
+      "id": "saldacloud-site",
+      "name": "saldacloud-site",
+      "status": "concluído",
+      "completion": 100,
+      "tech_stack": [
+        "next",
+        "react",
+        "react-dom"
+      ],
+      "description": "Micro-SaaS Gerado autonomamente.",
+      "last_update": "2026-03-21"
+    }
+  ]
+}

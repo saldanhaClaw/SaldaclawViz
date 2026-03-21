@@ -1,0 +1,26 @@
+{
+  "project": "SaldaCloud Factory V3",
+  "status": "LIVE & COLLECTING",
+  "active_assets": [
+    {
+      "name": "EbookGen Pro - Método 30D",
+      "url": "https://ebookgen-pro.vercel.app",
+      "revenue_engine": "Stripe",
+      "database": "NeonDB",
+      "delivery": "Resend",
+      "status": "PROD_LIVE"
+    },
+    {
+      "name": "AdCopy Optimizer",
+      "url": "https://saldaclaw-viz.vercel.app",
+      "status": "DASHBOARD_ONLY"
+    }
+  ],
+  "engine_state": "AUTONOMOUS_GROWTH",
+  "next_mission": "AdCopy Full Integration",
+  "visualizer_theme": {
+    "primary": "#D4AF37",
+    "secondary": "#0F172A",
+    "accent": "#00FF41"
+  }
+}

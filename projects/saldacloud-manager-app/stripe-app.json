@@ -1,0 +1,22 @@
+{
+  "$schema": "https://stripe.com/stripe-app.schema.json",
+  "id": "com.saldacloud.manager",
+  "name": "SaldaCloud Manager",
+  "version": "1.1.10",
+  "ui_extension": {
+    "views": [
+      {
+        "viewport": "stripe.dashboard.drawer.default",
+        "component": "App"
+      }
+    ],
+    "content_security_policy": {
+      "connect-src": [
+        "https://saldaclaw-viz.vercel.app/api"
+      ],
+      "purpose": ""
+    }
+  },
+  "extensions": null,
+  "distribution_type": "PRIVATE"
+}

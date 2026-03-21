@@ -1,0 +1,49 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background: Absolute Black -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#111111;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <!-- Gold Glow: Padrão Musa -->
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.12" />
+      <stop offset="60%" style="stop-color:#FFD700;stop-opacity:0.06" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0" />
+    </radialGradient>
+    <!-- Subtle gold particles -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  <!-- Main gold glow orb -->
+  <circle cx="960" cy="500" r="500" fill="url(#goldGlow)"/>
+  <!-- Secondary subtle glow -->
+  <circle cx="960" cy="500" r="650" fill="url(#goldGlow)" opacity="0.5"/>
+  <!-- Elegant minimal pattern -->
+  <g opacity="0.07" filter="url(#glow)">
+    <circle cx="200" cy="200" r="1" fill="#FFD700"/>
+    <circle cx="400" cy="150" r="0.8" fill="#FFD700"/>
+    <circle cx="600" cy="300" r="1.2" fill="#FFD700"/>
+    <circle cx="800" cy="100" r="0.9" fill="#FFD700"/>
+    <circle cx="1000" cy="250" r="1" fill="#FFD700"/>
+    <circle cx="1200" cy="180" r="1.1" fill="#FFD700"/>
+    <circle cx="1400" cy="300" r="0.8" fill="#FFD700"/>
+    <circle cx="1600" cy="220" r="1" fill="#FFD700"/>
+    <circle cx="1800" cy="280" r="0.9" fill="#FFD700"/>
+    <circle cx="300" cy="800" r="1.2" fill="#FFD700"/>
+    <circle cx="500" cy="900" r="0.9" fill="#FFD700"/>
+    <circle cx="700" cy="850" r="1" fill="#FFD700"/>
+    <circle cx="900" cy="950" r="1.1" fill="#FFD700"/>
+    <circle cx="1100" cy="880" r="0.8" fill="#FFD700"/>
+    <circle cx="1300" cy="920" r="1" fill="#FFD700"/>
+    <circle cx="1500" cy="870" r="0.9" fill="#FFD700"/>
+    <circle cx="1700" cy="940" r="1.2" fill="#FFD700"/>
+  </g>
+</svg>

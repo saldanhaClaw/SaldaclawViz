@@ -1,0 +1,229 @@
+{
+  "timeline": {
+    "background": "#000000",
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "text",
+              "text": "{{ HEADLINE }}",
+              "alignment": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "font": {
+                "color": "#000000",
+                "family": "Montserrat ExtraBold",
+                "size": "60",
+                "lineHeight": 1
+              },
+              "width": 463,
+              "height": 200
+            },
+            "start": 0,
+            "length": "auto",
+            "offset": {
+              "x": 0,
+              "y": 0.309
+            },
+            "position": "center",
+            "fit": "none",
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": "auto",
+            "asset": {
+              "type": "image",
+              "src": "https://templates.shotstack.io/automated-tiktok-video-historical-facts/9bdcce84-a00f-46e5-af9c-5b1e2163fdec.png"
+            },
+            "start": 0,
+            "scale": 0.2,
+            "offset": {
+              "x": 0,
+              "y": 0.308
+            },
+            "position": "center"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": "end",
+            "asset": {
+              "type": "caption",
+              "src": "alias://VOICEOVER",
+              "background": {
+                "color": "#0091ff",
+                "padding": 25,
+                "borderRadius": 9
+              },
+              "font": {
+                "size": "32"
+              }
+            },
+            "start": 0
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "fit": "none",
+            "scale": 1,
+            "length": 5,
+            "asset": {
+              "width": "768",
+              "height": "1280",
+              "type": "text-to-image",
+              "prompt": "{{ IMAGE_2_PROMPT }}"
+            },
+            "start": 4,
+            "transition": {
+              "out": "fade",
+              "in": "fade"
+            },
+            "effect": "zoomOut"
+          },
+          {
+            "fit": "none",
+            "scale": 1,
+            "length": 5,
+            "asset": {
+              "width": "768",
+              "height": "1280",
+              "type": "text-to-image",
+              "prompt": "{{ IMAGE_4_PROMPT }}"
+            },
+            "start": 12,
+            "transition": {
+              "out": "fade",
+              "in": "fade"
+            },
+            "effect": "slideRight"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": 5,
+            "asset": {
+              "width": "768",
+              "height": "1280",
+              "type": "text-to-image",
+              "prompt": "{{ IMAGE_1_PROMPT }}"
+            },
+            "start": 0,
+            "transition": {
+              "out": "fade"
+            },
+            "effect": "zoomIn",
+            "position": "center"
+          },
+          {
+            "fit": "none",
+            "scale": 1,
+            "length": 5,
+            "asset": {
+              "width": "768",
+              "height": "1280",
+              "type": "text-to-image",
+              "prompt": "{{ IMAGE_3_PROMPT }}"
+            },
+            "start": 8,
+            "transition": {
+              "out": "fade",
+              "in": "fade"
+            },
+            "effect": "slideLeft",
+            "offset": {
+              "x": 0.021,
+              "y": 0
+            },
+            "position": "center"
+          },
+          {
+            "fit": "none",
+            "scale": 1,
+            "length": 5,
+            "asset": {
+              "width": "768",
+              "height": "1280",
+              "type": "text-to-image",
+              "prompt": "{{ IMAGE_5_PROMPT }}"
+            },
+            "start": 16,
+            "transition": {
+              "out": "fade",
+              "in": "fade"
+            },
+            "effect": "slideUp"
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "length": "auto",
+            "asset": {
+              "voice": "Amy",
+              "text": "{{VOICEOVER}}",
+              "type": "text-to-speech"
+            },
+            "start": 0,
+            "alias": "VOICEOVER"
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "fps": 25,
+    "size": {
+      "width": 720,
+      "height": 1280
+    },
+    "destinations": [
+      {
+        "provider": "tiktok"
+      }
+    ]
+  },
+  "merge": [
+    {
+      "find": "HEADLINE",
+      "replace": "{{ HEADLINE_VAL }}"
+    },
+    {
+      "find": "VOICEOVER",
+      "replace": "{{ VOICEOVER_VAL }}"
+    },
+    {
+      "find": "IMAGE_1_PROMPT",
+      "replace": "{{ IMAGE_1_VAL }}"
+    },
+    {
+      "find": "IMAGE_2_PROMPT",
+      "replace": "{{ IMAGE_2_VAL }}"
+    },
+    {
+      "find": "IMAGE_3_PROMPT",
+      "replace": "{{ IMAGE_3_VAL }}"
+    },
+    {
+      "find": "IMAGE_4_PROMPT",
+      "replace": "{{ IMAGE_4_VAL }}"
+    },
+    {
+      "find": "IMAGE_5_PROMPT",
+      "replace": "{{ IMAGE_5_VAL }}"
+    }
+  ]
+}

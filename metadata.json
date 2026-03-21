@@ -1,0 +1,5 @@
+{
+  "name": "OpenCloud Orchestrator",
+  "description": "Centralized panel to monitor, control, and manage OpenCloud agents, missions, and communication flows.",
+  "requestFramePermissions": []
+}

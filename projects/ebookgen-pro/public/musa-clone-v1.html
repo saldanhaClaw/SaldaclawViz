@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTOCOLO SHAPE - O SEGREDO DAS MUSAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D4AF37; /* Dourado Musa */
+            --secondary: #FF0000;
+            --success: #11BC57;
+            --bg: #050505;
+            --surface: rgba(21, 21, 31, 0.6);
+            --text: #ffffff;
+            --text-dim: #bbbbbb;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            line-height: 1.4;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Mesh Background */
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.15), transparent 25%),
+                        radial-gradient(circle at 85% 30%, rgba(255, 0, 0, 0.1), transparent 25%);
+            z-index: -1;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-card {
+            background: var(--surface);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255,255,255,0.05);
+            border-radius: 20px;
+        }
+
+        /* Header */
+        header { padding: 1rem; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(212,175,55,0.3); position: sticky; top:0; z-index: 100;}
+        .announcement { font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; color: var(--primary); }
+
+        /* Hero */
+        .hero { padding: 5rem 1rem; perspective: 1000px; }
+        .hero h1 { 
+            font-size: clamp(2rem, 8vw, 4.5rem); 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            line-height: 1;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(212,175,55,0.3);
+        }
+        .hero h1 span { color: var(--primary); }
+
+        .comparison-container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid rgba(212,175,55,0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(212,175,55,0.1);
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
+        .comparison-container img { width: 100%; display: block; }
+
+        /* Checklist Box */
+        .checklist-section { padding: 5rem 1.5rem; }
+        .checklist-box {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem;
+            text-align: left;
+        }
+        .checklist-box h2 { font-size: 2rem; font-weight: 900; margin-bottom: 2rem; line-height: 1.1; color: var(--primary); }
+        .checklist-box ul { list-style: none; }
+        .checklist-box li { 
+            margin-bottom: 1.2rem; 
+            font-weight: 600; 
+            display: flex; 
+            align-items: center; 
+            gap: 1rem;
+            font-size: 1.2rem;
+        }
+        .checklist-box li::before { content: '✨'; font-size: 1.2rem; }
+
+        /* Feature Cards */
+        .features { padding: 5rem 1rem; display: grid; gap: 2rem; max-width: 1100px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+        .feature-card {
+            padding: 2.5rem;
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+        }
+        .feature-card h3 { color: var(--primary); text-transform: uppercase; font-weight: 900; margin-bottom: 1rem; font-size: 1.5rem; transform: translateZ(30px); }
+        .feature-card p { color: var(--text-dim); font-weight: 400; font-size: 1.1rem; transform: translateZ(20px); }
+
+        /* Product Stack */
+        .stack-section { padding: 5rem 1rem; }
+        .stack-img { max-width: 600px; width: 100%; margin: 3rem auto; display: block; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)); transform-style: preserve-3d; transition: transform 0.1s; }
+
+        /* Pricing */
+        .pricing { padding: 4rem 1rem; }
+        .price-tag { 
+            font-size: 5rem; 
+            font-weight: 900; 
+            color: var(--success); 
+            line-height: 1;
+            margin: 1rem 0;
+            text-shadow: 0 0 40px rgba(17,188,87,0.4);
+        }
+        .old-price { text-decoration: line-through; color: var(--text-dim); font-size: 1.5rem;}
+
+        /* Button Magnetic */
+        .btn-wrapper {
+            display: inline-block;
+            padding: 2rem;
+            cursor: pointer;
+        }
+        .btn-xl {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--primary), #FFA500);
+            color: #000;
+            padding: 1.5rem 4rem;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.8rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 10px 40px rgba(212,175,55,0.4);
+            transition: transform 0.1s ease-out;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        .btn-xl::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+            transform: skewX(-25deg);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine { 0% { left: -100%; } 20% { left: 200%; } 100% { left: 200%; } }
+
+        /* Social Proof Carousel (21st.dev inspired) */
+        .social-proof-section {
+            padding: 6rem 0;
+            overflow: hidden;
+            background: rgba(0,0,0,0.5);
+            border-top: 1px solid rgba(212,175,55,0.1);
+            border-bottom: 1px solid rgba(212,175,55,0.1);
+        }
+        .social-proof-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            font-weight: 900;
+        }
+        .carousel-track-container {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 40s linear infinite;
+        }
+        .carousel-track {
+            display: flex;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+        .proof-img {
+            width: 280px;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid rgba(212,175,55,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            opacity: 0.9;
+            transition: transform 0.3s;
+        }
+        .proof-img:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Bio */
+        .bio { padding: 5rem 1rem; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center; text-align: left; }
+        .bio-img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+        .bio h2 { color: var(--primary); font-weight: 900; margin-bottom: 1.5rem; font-size: 2.5rem; }
+
+        /* Scarcity Bar */
+        .scarcity-bar {
+            background: rgba(255,0,0,0.9);
+            color: #fff;
+            padding: 1rem;
+            font-weight: 900;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .bio { grid-template-columns: 1fr; text-align: center; }
+            .price-tag { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mesh-bg" id="meshBg"></div>
+
+    <header>
+        <p class="announcement">✨ O SEGREDO DO CORPO DOS SONHOS REVELADO ⬇️</p>
+    </header>
+
+    <div class="hero gs-reveal">
+        <h1>O SEGREDO QUE AS MUSAS <span>NÃO TE CONTAM...</span></h1>
+        <div class="comparison-container glass-card tilt-element">
+            <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/musa_cloned_hero_comparison_1773951546092.png" alt="Antes e Depois">
+        </div>
+    </div>
+
+    <section class="checklist-section gs-reveal">
+        <div class="checklist-box glass-card tilt-element">
+            <h2>O QUE VOCÊ VAI RECEBER NO PROTOCOLO:</h2>
+            <ul>
+                <li>Guia Completo de Queima Abdominal</li>
+                <li>Receitas Detox de Ação Imediata</li>
+                <li>Treinos de 20 min p/ Definir em Casa</li>
+                <li>Suporte VIP p/ Tirar Dúvidas</li>
+                <li>Checklist Diário de Hábitos</li>
+                <li>Bônus: O Segredo da Barriga Negativa</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card glass-card gs-fade tilt-element">
+            <h3>SEM DIETAS MALUCAS</h3>
+            <p>Coma o que gosta e veja os quilos sumirem na balança.</p>
+        </div>
+        <div class="feature-card glass-card gs-fade tilt-element">
+            <h3>RESULTADOS EM 21 DIAS</h3>
+            <p>Protocolo testado por milhares de mulheres reais.</p>
+        </div>
+        <div class="feature-card glass-card gs-fade tilt-element">
+            <h3>ACESSO VITALÍCIO</h3>
+            <p>O material é seu para sempre. Use quando precisar.</p>
+        </div>
+    </section>
+
+    <section class="stack-section gs-reveal">
+        <h2 style="font-weight: 900; font-size: 2.5rem; text-shadow: 0 0 20px rgba(255,255,255,0.2);">DESTRAVE SEU NOVO CORPO AGORA:</h2>
+        <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/musa_cloned_product_stack_1773951569996.png" alt="Produto Stack" class="stack-img tilt-element">
+        
+        <div class="btn-wrapper" id="magBtnWrapper">
+            <a href="#checkout" class="btn-xl" id="magBtn">QUERO COMEÇAR HOJE</a>
+        </div>
+    </section>
+
+    <section class="social-proof-section">
+        <h2>O QUE ELAS ESTÃO DIZENDO</h2>
+        <div class="carousel-track-container">
+            <!-- 21st.dev inspired Infinite Carousel -->
+            <div class="carousel-track">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+            </div>
+            <!-- Duplicated track for seamless infinite scroll -->
+            <div class="carousel-track">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+                <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/proof_whatsapp.png" alt="WhatsApp Proof" class="proof-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing gs-reveal">
+        <p class="old-price">De R$ 297,00 por apenas:</p>
+        <p class="price-tag">R$ 10,03</p>
+        <p style="font-weight: 700; font-size: 1.2rem; color: var(--text-dim);">Pagamento Único. Sem Mensalidades.</p>
+        <img src="https://logodownload.org/wp-content/uploads/2016/10/cartao-de-credito-logos.png" style="width: 250px; margin-top: 1.5rem; filter: grayscale(1) invert(1) opacity(0.5);" alt="Cartões">
+    </section>
+
+    <section class="bio glass-card gs-reveal" style="margin-bottom: 6rem; border-radius: 0;">
+        <img src="C:/Users/vinib/.gemini/antigravity/brain/b1010371-d8ed-4b7e-bfe7-9c5cdc28bfb6/musa_cloned_expert_bio_1773951593120.png" alt="Expert" class="bio-img tilt-element">
+        <div>
+            <h2>Conheça a Sua Mentora</h2>
+            <p style="font-size: 1.2rem; color: var(--text-dim); line-height: 1.6;">
+                Especialista em emagrecimento feminino e alta performance. Já ajudei mais de 15.000 mulheres a recuperarem a autoestima com o método 'Musa Defined'. Meu objetivo é simplificar o fitness para a mulher moderna que não tem tempo a perder.
+            </p>
+        </div>
+    </section>
+
+    <div class="scarcity-bar">
+        ⚠️ ATENÇÃO: OFERTA EXPIRA EM <span id="timer">14:59</span> — ÚLTIMAS VAGAS!
+    </div>
+
+    <!-- Bibliotecas GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Mesh Background Parallax (Move um pouco com o scroll)
+        gsap.to("#meshBg", {
+            yPercent: 20,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1
+            }
+        });
+
+        // 2. Revelações em Scroll (Fade in up)
+        gsap.utils.toArray('.gs-reveal').forEach(function(elem) {
+            gsap.fromTo(elem, 
+                { y: 100, opacity: 0 }, 
+                {
+                    y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 85%", // Dispara quando o topo do elemento atinge 85% da tela
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        // 3. Stagger Animations para os Features
+        gsap.fromTo(".gs-fade", 
+            { y: 50, opacity: 0 },
+            {
+                y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".features",
+                    start: "top 80%"
+                }
+            }
+        );
+
+        // 4. 3D Tilt Effect Interativo nas imagens e cards
+        const tiltElements = document.querySelectorAll('.tilt-element');
+        tiltElements.forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // Rotaciona baseado na posição do mouse (suavizado)
+                const rotateX = ((y - centerY) / centerY) * -15; // Max 15 graus
+                const rotateY = ((x - centerX) / centerX) * 15;
+                
+                el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+            });
+        });
+
+        // 5. Magnetic Button Effect
+        const magWrapper = document.getElementById('magBtnWrapper');
+        const magBtn = document.getElementById('magBtn');
+        
+        magWrapper.addEventListener('mousemove', (e) => {
+            const rect = magWrapper.getBoundingClientRect();
+            const x = (e.clientX - rect.left) - (rect.width / 2);
+            const y = (e.clientY - rect.top) - (rect.height / 2);
+            
+            // Move o botão em direção ao cursor
+            gsap.to(magBtn, {
+                x: x * 0.4,
+                y: y * 0.4,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+
+        magWrapper.addEventListener('mouseleave', () => {
+            gsap.to(magBtn, {
+                x: 0,
+                y: 0,
+                duration: 0.7,
+                ease: "elastic.out(1, 0.3)"
+            });
+        });
+
+        // Scarcity Timer
+        let time = 899;
+        const timerElement = document.getElementById('timer');
+        setInterval(() => {
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+            timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            if(time > 0) time--;
+        }, 1000);
+    </script>
+</body>
+</html>
